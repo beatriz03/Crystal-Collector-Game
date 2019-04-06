@@ -1,0 +1,80 @@
+body {
+    background: url("../images/shinyBackground.jpg");
+  }
+
+
+h1 {
+    color: rgb(27, 27, 163);    
+    border: 3px solid salmon;
+    background-color: beige;
+    text-align: center;
+    padding: 50px 0;
+    width: 450px;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 40px;
+}
+
+
+#instructions {
+    color: rgb(27, 27, 163);
+    border: 3px solid salmon;
+    background-color: beige;
+    text-align: center;
+    width: 450px;
+    float: right;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+
+}
+
+
+#randomNumber {
+    color: rgb(27, 27, 163);
+    border: 3px solid salmon;
+    background-color: beige;
+    text-align: center;
+    width: 170px;
+    height: 110px;
+    margin: 15px;
+    float: left;
+    font-size: 20px;
+}
+
+#score {
+    color: rgb(27, 27, 163);
+    border: 3px solid salmon;
+    background-color: beige;
+    text-align: center;
+    width: 170px;
+    height: 110px;
+    margin: 15px;
+    float: left;
+    font-size: 20px;
+}
+
+
+#pointSoFar {
+    color: rgb(27, 27, 163);
+    border: 3px solid salmon;
+    background-color: beige;
+    text-align: center;
+    width: 170px;
+    height: 110px;
+    margin: 15px;
+    float: left;
+    font-size: 20px;
+}
+
+#crystals {
+    border: 3px solid salmon;
+    background-color: beige;
+    text-align: center;
+    margin: 15px;
+    width: 450px;
+    height: 110px;
+    float: left;
+    position: relative;
+    bottom: -150px;
+    left: -550px;
+}
