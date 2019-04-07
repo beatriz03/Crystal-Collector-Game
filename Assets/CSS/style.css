@@ -68,7 +68,7 @@ h1 {
 
 #crystals {
     border: 3px solid salmon;
-    background-color: beige;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     margin: 15px;
     width: 450px;
