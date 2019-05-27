@@ -1,6 +1,6 @@
 # unit-4-game
 
-The Crystal Colector game is an exercise with Jquery. We have learned how to create a page with HTML and style it with CSS but in order to make it dynamic we use Jquery and Javascript. 
+The Crystal Colector game is an exercise with Jquery. We have learned how to create a page with HTML and style it with CSS and Bootsrap but in order to make it dynamic we use Jquery and Javascript. 
 
 This project is useful because it refreshes the programmer in HTML/CSS but implements the new material from unit 4 to make it interactive, i.e clicking a button to add to your score. 
 

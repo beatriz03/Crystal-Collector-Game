@@ -4,57 +4,91 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Unit 4 Game</title>
-    <script src="game.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+    <title>Crystal Collector Game</title>
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--CSS Link-->
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+
+    <!--Google fonts Link-->
     <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
 </head>
 
 <body>
+    <div class=container>
+
+        <div class="jumbotron">
+            <h1 class="display-4" id='title'>Crystal Collector!</h1>
+            <p id="instructions">You will be given a random number at the start of the game.<br>
+                By clicking on one of the four crystals below you will add a specific amount of points to your total
+                score.<br>
+                How to <strong>win:</strong> match your score to the random number given.<br>
+                How to <strong>lose:</strong> if your score exceeds the random number given.<br>
+                The value of each crystal is hidden from you until you click on it.<br>
+                Each time the game starts the value of the crystals will change.<br>
+                Good luck!</p>
+        </div> <!-- end of jumbotron div -->
+    </div> <!-- end of jumbotron container -->
+
+
+    <div class=container>
+        <div class='row'>
+            <div class='col-lg-4'>
+                <div class='panel panel-primary'>
+                    <div id="winsLosses">
+                            <div id="winCount"><strong>Wins:</strong></div>
+                            <div id="lossCount"><strong>Losses:</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end of score container -->
+
+
+    <div class=container>
+        <div class='row'>
+            <div class='col-lg-4'>
+                <div class='panel panel-primary'>
+                    <div id="targetScore">
+                    </div>
+                </div>
+            </div>
+
+            <div class='col-lg-5'>
+            <div id="crystals">
+                    <input type="image" src="Assets/Images/blueCrystal.jpg" class="rounded float-center" id="bluecrystal" style="width:90px" alt="blue crystal">
+
+                    <input type="image" src="Assets/Images/greenCrystal.png" class="rounded float-center" id="greencrystal" style="width:100px" alt="green crystal">
+
+                    <input type="image" src="Assets/Images/redCrystal.jpg" class="rounded float-center" id="redcrystal" style="width:90px" alt="red crystal">
+
+                    <input type="image" src="Assets/Images/yellowCrystal.jpg" class="rounded float-center" id="yellowcrystal" style="width:90px" alt="yellow crystal">
         
-    <h1>Crystals Collector!</h1>
+                </div> <!-- end of crystals div -->
+            </div> <!-- end of crystals col-lg div -->
+        </div><!-- end of randomNumber & crystals row -->
+    </div><!-- end of randomNumber & crystals container -->
 
-
-                <div id="instructions">
-
-                    <p>You will be given a random number at the start of the game.</p>
-                    <p>By clicking on one of the four crystals below you will add a specific amount of points to your total score.</p>
-                    <p>How to <strong>win:</strong> match your score to the random number given.</p>
-                    <p>How to <strong>lose:</strong> if your score exceeds the random number given.</p>
-                    <p>The value of each crystal is hidden from you until you click on it.</p>
-                    <p>Each time the game starts the value of the crystals will change.</p>
-                    <p>Good luck!</p>
-
+    <div class=container>
+        <div class='row'>
+            <div class='col-lg-4'>
+                <div class='panel panel-primary'>
+                    <div id="yourScore">
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div><!-- end of points so far container -->
 
-                <div id="score">
-                        <p>Wins: </p>
-                        <p>Losses: </p>
-    
-                </div>
+    <!--JQuery Link-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-
-                <div id="randomNumber">
-                    <p>The number to match:</p>
-                </div>
-
-
-
-                <div id ="pointSoFar"
-                    <p>Points so far:</p>
-                </div>
-
-                <div id="crystals">
-                    <input type="image" src="Assets/Images/blueCrystal.jpg" class="rounded float-left" class="bluecrystal" style="width:90px" alt="blue crystal">
-                    <input type="image" src="Assets/Images/greenCrystal.png" class="rounded float-left" style="width:90px" alt="green crystal">
-                    <input type="image" src="Assets/Images/redCrystal.jpg" class="rounded float-left" style="width:90px" alt="red crystal">
-                    <input type="image" src="Assets/Images/yellowCrystal.jpg" class="rounded float-left" style="width:90px" alt="yellow crystal">
-
-                </div>
-
-
-
-
+    <!--JavaScript Link-->
+    <script src="Assets/Javascript/game.js"></script>
 
 </body>
+
 </html>

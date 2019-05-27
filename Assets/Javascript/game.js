@@ -1,21 +1,102 @@
-var computerChoice = [18-120];
-var crystalValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-var randomNumber = 0;    
-var wins = 0;
-var losses = 0;
+var crystal ={
+    blue:
+    {
+        name:'Blue',
+        value:0
+    },
+    green:
+    {
+        name:'Green',
+        value:0
+    },
+    red:
+    {
+        name:'Red',
+        value:0
+    },
+    yellow:
+    {
+        name:'Yellow',
+        value:0
+    }
+}
 
-    var randomNumber= document.getElementById("randomNumber-text");
-        var winsText = document.getElementById("wins-text");
-        var lossesText = document.getElementById("losses-text");
+var winCount=0;
+var lossCount=0;
+var currentScore=0;
+var targetScore=0;
 
+function getrandom(min, max) {
+    return Math.floor(Math.random() * (max - min +1)) +min;
+}
+
+function startGame() {
+    currentScore=0;
+
+//get new target score
+    targetScore = getrandom(19, 120);
+
+//generate random value for each crystal
+    crystal.blue.value = getrandom(1, 12);
+    crystal.green.value = getrandom(1, 12);
+    crystal.red.value = getrandom(1, 12);
+    crystal.yellow.value = getrandom(1, 12);
+
+
+$('#yourScore').html('<strong>Points So Far: </strong><br>' + currentScore);
+$('#targetScore').html('<strong>Number to match: </strong><br>' + targetScore);
+
+
+console.log('---------------');
+console.log('Target Score ' + targetScore);
+console.log('Blue: ' + crystal.blue.value + ' | Green: ' + crystal.green.value + ' | Red: ' + crystal.red.value + ' | Yellow: ' + crystal.yellow.value);
+console.log('---------------');
+}
+
+
+function addValues (crystal){
+    currentScore=currentScore + crystal.value;
     
-    $(".bluecrystal").on("click", function() {
-        var randomNumber = randomNumber[Math.floor(Math.random() * randomNumber.length)];
+    $('#yourScore').html('<strong>Points So Far: </strong><br>' + currentScore);
+    
+    checkWin();
+}
+
+function checkWin(){
+    if (currentScore > targetScore) {
+        alert('You lost!');
+        lossCount++;
+
+        $('#lossCount').html('<strong>Losses: </strong>' + lossCount);
+        startGame();
+    } 
+    
+    
+    else if (currentScore == targetScore) {
+        alert('You win! Excellent crystal collecting!');
+        winCount++;
+
+        $('#winCount').html('<strong>Wins: </strong>' + winCount);
+        startGame();
+    }
+
+}
 
 
-       if (pointSoFar > randomNumber) {
-        losses++
-       } else if (pointsSoFar == randomNumber) {
-        wins++
-       }
+startGame();
 
+    $('#bluecrystal').on('click', function() {
+        addValues(crystal.blue);
+    });
+
+    $('#greencrystal').on('click', function() {
+        addValues(crystal.green);
+    });
+
+    $('#redcrystal').on('click', function() {
+        addValues(crystal.red);
+    });
+
+    $('#yellowcrystal').on('click', function() {
+        addValues(crystal.yellow);
+    });
